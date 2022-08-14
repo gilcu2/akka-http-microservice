@@ -5,7 +5,7 @@ enablePlugins(JavaAppPackaging)
 name := "url_shortener"
 organization := "com.github.gilcu2"
 version := "0.1.0"
-scalaVersion := "3.1.3"
+scalaVersion := "2.13.8"
 
 conflictWarning := ConflictWarning.disable
 
@@ -28,7 +28,7 @@ libraryDependencies ++= {
     "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion,
 
     "org.scalatest" %% "scalatest" % scalaTestV % Test,
-  ) ++ Seq(
+
     "com.typesafe.akka" %% "akka-actor" % akkaV,
     "com.typesafe.akka" %% "akka-actor-typed" % akkaV,
     "com.typesafe.akka" %% "akka-stream" % akkaV,
@@ -40,7 +40,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaV % Test,
     "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpV % Test,
 
-  ).map(_.cross(CrossVersion.for3Use2_13))
+  )
 }
 
 Revolver.settings
